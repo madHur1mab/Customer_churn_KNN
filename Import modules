@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import mean_absolute_error, accuracy_score
+import matplotlib.pyplot as plt
+import joblib
+
+file_path = "/content/45K_Data_For_Churn_Prediction_Modelling (1).xlsb"
+df = pd.read_excel(file_path, engine='pyxlsb')
